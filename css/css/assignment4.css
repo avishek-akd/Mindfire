@@ -1,0 +1,172 @@
+
+
+
+
+
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-color: pink;
+			}
+
+			.container{
+				margin: 0 auto;
+				width: 1000px;
+				height: auto;
+			}
+
+			.header{
+				width: 1000px;
+				height: 130px;
+				background-color: aqua;
+			}
+
+			#logo{
+				float: left;
+				height: 50px;
+				width: 50px;
+				position: absolute;;
+				
+			}
+
+			#banner{
+				float: right;
+				height: 130px;
+				width: 1000px;
+				
+			}
+
+
+			.nav_bar{
+				width: 1000px;
+				height: 60px;
+				background: black;
+			}
+
+			.content{
+				width: 1000px;
+				height: auto;
+			}
+
+			.inner_content {
+			    border-radius: 5px;
+			    background-color: #f2f2f2;
+			    padding: 20px;
+			}
+
+			
+			.footer{
+				width: 1000px;
+				height: 100px;
+				clear: both;
+				background: black;
+			}
+
+
+			.nav_bar ul{
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				margin-left: 20px;
+			}
+
+			.nav_bar ul li{
+				display: inline;
+				line-height: 60px;
+			}
+
+			.nav_bar ul li a{
+				color: white;
+				font-size: 20px;
+				margin-left: 20px;
+				margin: 10px;
+				border: 3px groove red;
+				border-radius: 17px;
+				padding: 10px;
+
+			}
+
+			
+			.nav_bar ul li a:hover{
+				
+    			background-color: orange; 
+    			text-decoration: underline;
+    			border: 2px solid red;
+				border-radius: 5px 5px 5px 5px;
+				padding: 10px
+			}
+
+			label{
+				font-size: 20px;
+				letter-spacing: 0px;
+				padding: 0px 0px 0px 50px;
+			}
+
+			legend{
+				color: CornflowerBlue;
+			}
+
+			footer{
+				color: white;
+				line-height: 100px;
+				text-align: center;
+			}
+
+			.required{
+      			color:red;
+			}
+			.mark{
+      			color:red;
+			}
+
+			
+
+			input[type=text],input[type=email],input[type=number],input[type=password],input[type=date], select {
+				float: right;
+			    width: 50%;
+			    height: 30px;
+			    padding: 4px 10px;
+			    margin: 0px 20px;
+			    display: inline-block;
+			    border: 1px solid #ccc;
+			    border-radius: 4px;
+			    box-sizing: border-box;
+			}
+			textarea{
+				float: right;
+				width: 50%;
+				padding: 4px 10px;
+			    margin: 0px 20px;
+			    display: inline-block;
+			    border: 1px solid #ccc;
+			    border-radius: 4px;
+			    box-sizing: border-box;
+			}
+
+
+			
+
+			input[type=submit] {
+				float: right;
+				width: 25%;
+				padding: 10px 10px;
+			    margin: 8px 20px;
+			    background-color: #4CAF50;
+			    color: white;
+			    border: none;
+			    border-radius: 4px;
+			    cursor: pointer;
+			}
+
+			input[type=submit]:hover {
+				float: right;
+				width: 25%;
+				padding: 10px 10px;
+			    margin: 8px 20px;
+			    background-color: #45a049;
+			    color: white;
+			    border: none;
+			    border-radius: 4px;
+			    cursor: pointer;
+
+			}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Welcome To Website Designing</title>
+		<meta charset="UTF-8">
+  		<meta name="description" content="Official website of CET,Bhubaneswar">
+  		<meta name="keywords" content="website,design,bhubaneswar,website designing">
+  		<meta name="author" content="Avishek Das">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  		<link rel="stylesheet" type="text/css" href="css/assignment4.css">
+
+
+  		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+  		
+  		<script type="text/javascript" src="js/address.js"></script>
+		
+
+	</head>
+
+	<body>
+		<div class="container">
+			
+			<div class="header">
+
+				<img src="images/logo1.png" id="logo" alt="Website Designing"/>
+				
+				<img src="images/banner1.jpg" id="banner" alt="banner"/>
+				
+			</div>
+
+			<div class="nav_bar">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Electronics</a></li>
+					<li><a href="#">TVs & Appliances</a></li>
+					<li><a href="#">Furniture</a></li>
+					<li><a href="#">Sports</a></li>
+					<li><a href="#">Login &Signup</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+
+			
+
+			<div class="content">
+				<div class="inner_content">
+					<form action="#" method="POST">
+						<fieldset>
+							<legend>Registration Form</legend>
+							<span class="required">*</span><span class="mark">marked fields are mandatory</span>
+							<fieldset>
+
+								<legend>Personal Details</legend>
+							    <label for="fname">First Name</label><span class="required">*</span>
+							    <input type="text" id="fname" name="firstname" placeholder="Enter Your First Name.." required><br><br>
+							    <label for="mname">Middle Name</label>
+							    <input type="text" id="mname" name="middlename" placeholder="Enter Your Middle Name.." ><br><br>
+							    <label for="lname">Last Name</label><span class="required">*</span>
+							    <input type="text" id="lname" name="lastname" placeholder="Enter Your Last Name.." required><br><br>
+
+							    <label for="gender">Gender</label><span class="required">*</span>
+							    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+						    	<input type="radio"  name="gender" value="male" required> Male
+	 							<input type="radio"  name="gender" value="female"> Female <br><br>
+
+						    	<label for="dob">Date Of Birth</label><span class="required">*</span>
+						    	<input type="date" id="dob" name="dob" required> <br><br>
+
+	 						</fieldset>
+
+	 						
+
+	 						<fieldset>
+
+	 							<legend>Login Details</legend>
+
+	 							<label for="email1">Email Id</label><span class="required">*</span>
+							    <input type="email" id="email1" name="email1" placeholder="Enter Your Email.." required><br><br>
+
+							    <label for="pwd">Password</label><span class="required">*</span>
+						    	<input type="password" id="pwd" name="pwd" placeholder="Enter Your Password.." required><br><br>
+
+						    	<label for="cpwd">Confirm Password</label><span class="required">*</span>
+						    	<input type="password" id="cpwd" name="cpwd" placeholder="Re-enter Your Password.." required><br><br>
+	 							
+
+	 						</fieldset>
+
+
+	 						<fieldset>
+	 							<legend>Contact Information</legend>
+
+
+	 							<label for="email2">Alternative Email Id</label>
+							    <input type="email" id="email2" name="email2" placeholder="Enter Your Alternative Email.."><br><br>
+
+							    <label for="mob1">Mobile No</label><span class="required">*</span>
+							    <input type="number" id="mob1" name="mob1" placeholder="Enter Your Mobile No.." required><br><br>
+
+							    <label for="mob2">Alternative Mobile No</label>
+							    <input type="number" id="mob2" name="mob2" placeholder="Enter Your Alternative Mobile No.."><br><br>
+
+
+							    <fieldset>
+		 							<legend>Current Address</legend>
+
+		 							<label>Address Line</label><span class="required">*</span>
+								    <textarea rows="4" cols="50" name="cadd" required></textarea> <br><br><br><br>
+
+								    <label for="country1">Country</label><span class="required">*</span>
+
+							   		<select id="country1" name="country1" required>
+							    	</select><br><br>
+
+							    	<label for="state1">State</label><span class="required">*</span>
+
+	 								<select id="state1" name="state1" required>
+										<option value="">------------Select State------------</option>
+										
+									</select><br><br>
+
+									<label for="city1">City</label><span class="required">*</span>
+
+	 								<select id="city1" name="city1" required>
+										<option value="">------------Select City------------</option>
+										
+									</select><br><br>
+
+									<label for="zip1">Zip Code</label><span class="required">*</span>
+							    	<input type="number" id="zip1" name="zip1" placeholder="Enter Your Zip Code.." required>
+
+
+	 							</fieldset>
+
+
+
+	 							<fieldset>
+		 							<legend>Permanent Address</legend>
+
+		 							<label>Address Line</label>
+								    <textarea rows="4" cols="50" name="padd"></textarea> <br><br><br><br>
+
+								    <label for="country2">Country</label>
+
+							   		<select id="country2" name="country2">
+								    	
+							    	</select><br><br>
+
+							    	<label for="state2">State</label>
+
+	 								<select id="state2" name="state2">
+										<option value="">------------Select State------------</option>
+										
+									</select><br><br>
+
+									<label for="city2">City</label>
+
+	 								<select id="city2" name="city2">
+										<option value="">------------Select City------------</option>
+										
+									</select><br><br>
+
+									<label for="zip2">Zip Code</label>
+							    	<input type="number" id="zip2" name="zip2" placeholder="Enter Your Zip Code..">
+
+	 							</fieldset>
+
+
+	 						</fieldset>
+
+	 						<fieldset>
+	 							<legend>Subscription</legend>
+
+	 							<label for="subscribe">Subscribe news letter?</label>
+	 							<input type="radio"  name="subscribe" value="Yes"> Yes
+	 							<input type="radio"  name="subscribe" value="NO"> No
+							</fieldset>
+							
+	 						<input type="submit" value="Register" name="submit">
+					    </fieldset>
+	 				 </form>
+ 				 </div>
+			</div>
+
+			
+			<div class="footer">
+				<footer>&copy; Copyright 2018 Mindfire Solutions</footer>
+			</div>
+		</div>
+
+
+	</body>
+
+
+</html>
