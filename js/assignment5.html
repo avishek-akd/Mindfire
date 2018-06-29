@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Welcome To Website Designing</title>
+		<meta charset="UTF-8">
+  		<meta name="description" content="Official website of CET,Bhubaneswar">
+  		<meta name="keywords" content="website,design,bhubaneswar,website designing">
+  		<meta name="author" content="Avishek Das">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  		<link rel="stylesheet" type="text/css" href="css/assignment5.css">
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+  		<script type="text/javascript" src="js/address.js"></script>
+  		<script type="text/javascript" src="js/assignment5.js"></script>
+  		<script src='https://www.google.com/recaptcha/api.js'></script>
+		
+
+	</head>
+
+	<body onload="changeCaptcha()">
+		<div class="container">
+			
+			<div class="header">
+
+				<img src="images/logo1.png" id="logo" alt="Website Designing"/>
+				
+				<img src="images/banner1.jpg" id="banner" alt="banner"/>
+				
+			</div>
+
+			<div class="nav_bar">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Electronics</a></li>
+					<li><a href="#">TVs & Appliances</a></li>
+					<li><a href="#">Furniture</a></li>
+					<li><a href="#">Sports</a></li>
+					<li><a href="#">Login &Signup</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+
+			
+
+			<div class="content">
+				<div class="inner_content">
+					<form  method="POST" action="#" name="regd_form" onsubmit="return validateForm()">
+						<fieldset>
+							<legend>Registration Form</legend>
+							<span class="required">*</span><span class="mark">marked fields are mandatory</span>
+							<fieldset>
+
+								<legend>Personal Details</legend>
+							    <label for="fname" class="heading">First Name</label><span class="required">*</span>
+							    <input type="text" id="fname" name="firstname" placeholder="Enter Your First Name.." onkeyup="lettersOnly(this)"><br><br>
+							    <span id="msg-fname" class="msg-label"></span><br>
+
+							    <label for="mname" class="heading">Middle Name</label>
+							    <input type="text" id="mname" name="middlename" placeholder="Enter Your Middle Name.." onkeyup="lettersOnly(this)"><br><br>
+							    <span id="msg-mname" class="msg-label"></span><br>
+
+							    <label for="lname" class="heading">Last Name</label><span class="required">*</span>
+							    <input type="text" id="lname" name="lastname" placeholder="Enter Your Last Name.." onkeyup="lettersOnly(this)"><br><br>
+							    <span id="msg-lname" class="msg-label"></span><br>
+
+							    <label for="gender"class="heading">Gender</label><span class="required">*</span>
+							    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+						    	<input type="radio" id="male"  name="gender" value="male"> Male
+	 							<input type="radio" id="female" name="gender" value="female"> Female <br><br>
+	 							<span id="msg-gender" class="msg-label"></span><br>
+
+						    	<label for="dob" class="heading">Date Of Birth</label><span class="required">*</span>
+						    	<input type="date" id="dob" name="dob" min="1900-01-01"> <br><br>
+						    	<span id="msg-dob" class="msg-label"></span><br>
+
+						    	<label class="heading">Personal Interest</label><span class="required">*</span>
+						    	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						    	<input type="checkbox" id="sports" name="interest" value="Sports" > Sports
+								<input type="checkbox" name="interest" value="Books"> Books
+								<input type="checkbox" name="interest" value="Computer"> Computer
+								<input type="checkbox" name="interest" value="Software"> Software
+								<input type="checkbox" name="interest" value="Sports"> Fashion
+								<input type="checkbox" name="interest" value="Cricket"> Cricket
+								<span id="msg-interest" class="msg-label"></span><br>
+
+	 						</fieldset>
+
+
+	 						<fieldset>
+
+	 							<legend>Login Details</legend>
+
+	 							<label for="email1" class="heading">Email Id</label><span class="required">*</span>
+							    <input type="text" id="email1" name="email1" placeholder="Enter Your Email.." ><br><br>
+							    <span id="msg-email1" class="msg-label"></span><br>
+
+							    <label for="pwd" class="heading">Password</label><span class="required">*</span>
+						    	<input type="password" id="pwd" name="pwd" placeholder="Enter Your Password.." ><br><br>
+						    	<span id="msg-pwd" class="msg-label"></span><br>
+
+						    	<label for="cpwd" class="heading">Confirm Password</label><span class="required">*</span>
+						    	<input type="password" id="cpwd" name="cpwd" placeholder="Re-enter Your Password.." ><br><br>
+						    	<span id="msg-cpwd" class="msg-label"></span><br>
+	 							
+
+	 						</fieldset>
+
+
+	 						<fieldset>
+	 							<legend>Contact Information</legend>
+
+
+	 							<label for="email2" class="heading">Alternative Email Id</label>
+							    <input type="text" id="email2" name="email2" placeholder="Enter Your Alternative Email.."><br><br>
+							    <span id="msg-email2" class="msg-label"></span><br>
+
+							    <label for="mob1" class="heading">Mobile No</label><span class="required">*</span>
+							    <input type="text" id="mob1" name="mob1" placeholder="Enter Your Mobile No.." onkeyup="numbersOnly(this)"><br><br>
+							    <span id="msg-mob1" class="msg-label"></span><br>
+
+							    <label for="mob2" class="heading">Alternative Mobile No</label>
+							    <input type="text" id="mob2" name="mob2" placeholder="Enter Your Alternative Mobile No.." onkeyup="numbersOnly(this)"><br><br>
+							    <span id="msg-mob2" class="msg-label"></span><br>
+
+
+							    <fieldset>
+		 							<legend>Current Address</legend>
+
+		 							<label class="heading">Address Line</label><span class="required">*</span>
+								    <textarea rows="4" cols="50" name="cadd" id="cadd"></textarea> <br><br><br><br>
+								    <span id="msg-cadd" class="msg-label"></span><br>
+
+								    <label for="country1" class="heading">Country</label><span class="required">*</span>
+
+							   		<select id="country1" name="country1"></select><br><br>
+							    	<span id="msg-country1" class="msg-label"></span><br>
+
+							    	<label for="state1" class="heading">State</label><span class="required">*</span>
+
+	 								<select id="state1" name="state1" >
+										<option value="blank">------------Select State------------</option>
+									</select><br><br>
+									<span id="msg-state1" class="msg-label"></span><br>
+
+									<label for="city1" class="heading">City</label><span class="required">*</span>
+
+	 								<select id="city1" name="city1" >
+										<option value="blank">------------Select City------------</option>
+									</select><br><br>
+									<span id="msg-city1" class="msg-label"></span><br>
+
+									<label for="zip1" class="heading">Zip Code</label><span class="required">*</span>
+							    	<input type="text" id="zip1" name="zip1" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
+							    	<span id="msg-zip1" class="msg-label"></span><br>
+
+	 							</fieldset>
+
+
+
+	 							<fieldset>
+		 							<legend>Permanent Address</legend>
+
+		 							<label class="heading">Address Line</label>
+								    <textarea rows="4" cols="50" name="padd" id="padd"></textarea> <br><br><br><br>
+								    <span id="msg-padd" class="msg-label"></span><br>
+
+								    <label for="country2" class="heading">Country</label>
+
+							   		<select id="country2" name="country2"></select><br><br>
+							    	<span id="msg-country2" class="msg-label"></span><br>
+
+							    	<label for="state2" class="heading">State</label>
+
+	 								<select id="state2" name="state2">
+										<option value="blank">------------Select State------------</option>
+										
+									</select><br><br>
+									<span id="msg-state2" class="msg-label"></span><br>
+
+									<label for="city2" class="heading">City</label>
+
+	 								<select id="city2" name="city2">
+										<option value="blank">------------Select City------------</option>
+										
+									</select><br><br>
+									<span id="msg-city2" class="msg-label"></span><br>
+
+									<label for="zip2" class="heading">Zip Code</label>
+							    	<input type="text" id="zip2" name="zip2" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
+							    	<span id="msg-zip2" class="msg-label"></span><br>
+
+	 							</fieldset>
+
+
+	 						</fieldset>
+
+	 						
+	 						<fieldset>
+	 							<legend>Captcha</legend>
+
+	 							
+	 							<input type="text" id="captcha" disabled>
+	 							<input type="hidden" id="hidden">
+	 							<i class="fa fa-refresh fa-spin" id="refresh" onclick="changeCaptcha()"></i>
+	 							
+	 							<input type="text" id="inputCaptcha" placeholder="Enter captcha" onkeyup="numbersOnly(this)" />
+	 							<span id="msg-captcha" class="msg-label-captcha"></span>
+
+	 						</fieldset>
+
+
+	 						
+
+
+	 						
+							
+	 						<input type="submit" value="Register" name="register">
+					    </fieldset>
+	 				</form>
+ 				 </div>
+			</div>
+
+			
+			<div class="footer">
+				<footer>&copy; Copyright 2018 Mindfire Solutions</footer>
+			</div>
+		</div>
+
+
+	</body>
+
+
+</html>
