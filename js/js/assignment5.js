@@ -161,10 +161,21 @@ function validateForm(){
 		document.getElementById("zip1").focus();
 		return false;
 		
+	}if (parseInt(zip1)==0) {
+		printError("msg-zip1","Correct the zip code field","red");
+		document.getElementById("zip1").focus();
+		return false;
+		
 	}
 	if (zip_regx.test(zip1) == false) {
 		printError("msg-zip1","Enter 6 digit zip code","red");
 		document.getElementById("zip1").focus();
+		return false;
+		
+	}
+	if (parseInt(zip2)==0) {
+		printError("msg-zip2","Correct the zip code field","red");
+		document.getElementById("zip2").focus();
 		return false;
 		
 	}if (zip_regx1.test(zip2) == false) {
