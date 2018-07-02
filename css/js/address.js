@@ -4,7 +4,7 @@ var stateOptions;
 var cityOptions;
 
 	$.getJSON('json/countries.json',function(result){
-		countryOptions+="<option value='blank'>------------Select Country------------</option>";
+		//countryOptions+="<option value='blank'>------------Select Country------------</option>";
 		$.each(result, function(key, value){
 
 			countryOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
