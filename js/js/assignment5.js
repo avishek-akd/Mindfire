@@ -188,7 +188,7 @@ function validateForm(){
 		document.getElementById("inputCaptcha").focus();
 		return false;
 		
-	}if (inputCaptcha!=hidden) {
+	}if (parseInt(inputCaptcha)!=parseInt(hidden)) {
 		printError("msg-captcha","Invalid captcha","red");
 		document.getElementById("inputCaptcha").focus();
 		return false;
