@@ -4,7 +4,7 @@ var stateOptions;
 var cityOptions;
 
 	$.getJSON('json/countries.json',function(result){
-		//countryOptions+="<option value='blank'>------------Select Country------------</option>";
+		countryOptions+="<option value='blank'>------------Select Country------------</option>";
 		$.each(result, function(key, value){
 
 			countryOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
@@ -17,7 +17,7 @@ var cityOptions;
 		stateOptions = null;
 		var x = $(this).val();
 		$.getJSON('json/states.json',function(result){
-			//stateOptions+="<option value='blank'>------------Select State------------</option>";
+			stateOptions+="<option value='blank'>------------Select State------------</option>";
 			$.each(result, function(key,value) {
 				if(x==value.country_id){
 					stateOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
@@ -31,7 +31,7 @@ var cityOptions;
 		stateOptions = null;
 		var x = $(this).val();
 		$.getJSON('json/states.json',function(result){
-			//stateOptions+="<option value='blank'>------------Select State------------</option>";
+			stateOptions+="<option value='blank'>------------Select State------------</option>";
 			$.each(result, function(key,value) {
 				if(x==value.country_id){
 					stateOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
@@ -45,7 +45,7 @@ var cityOptions;
 		var x = $(this).val();
 		cityOptions = null;
 		$.getJSON('json/cities.json',function(result){
-			//cityOptions+="<option value='blank'>------------Select City------------</option>";
+			cityOptions+="<option value='blank'>------------Select City------------</option>";
 			$.each(result, function(key,value) {
 				if(x==value.state_id){
 					cityOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
@@ -59,7 +59,7 @@ var cityOptions;
 		var x = $(this).val();
 		cityOptions = null;
 		$.getJSON('json/cities.json',function(result){
-			//cityOptions+="<option value='blank'>------------Select City------------</option>";
+			cityOptions+="<option value='blank'>------------Select City------------</option>";
 			$.each(result, function(key,value) {
 				if(x==value.state_id){
 					cityOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
