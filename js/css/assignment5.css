@@ -1,12 +1,9 @@
 
 
-
-
-
 			body{
 				margin: 0px;
 				padding: 0px;
-				background-color: pink;
+				background-color: #1203034d;
 			}
 
 			.container{
@@ -18,11 +15,9 @@
 			.header{
 				width: 1000px;
 				height: 130px;
-				background-color: aqua;
 			}
 
 			#logo{
-				float: left;
 				height: 50px;
 				width: 50px;
 				position: absolute;;
@@ -30,7 +25,6 @@
 			}
 
 			#banner{
-				float: right;
 				height: 130px;
 				width: 1000px;
 				
@@ -40,7 +34,7 @@
 			.nav_bar{
 				width: 1000px;
 				height: 60px;
-				background: black;
+				background: #000000e6;
 			}
 
 			.content{
@@ -53,15 +47,6 @@
 			    background-color: #f2f2f2;
 			    padding: 20px;
 			}
-
-			
-			.footer{
-				width: 1000px;
-				height: 100px;
-				clear: both;
-				background: black;
-			}
-
 
 			.nav_bar ul{
 				margin: 0px;
@@ -76,60 +61,45 @@
 			}
 
 			.nav_bar ul li a{
-				color: white;
+				color: #ffffff;
 				font-size: 20px;
 				margin-left: 20px;
 				margin: 10px;
-				border: 3px groove red;
+				border: 3px groove #ff0000;
 				border-radius: 17px;
 				padding: 10px;
 
 			}
 
-			
 			.nav_bar ul li a:hover{
-				
-    			background-color: orange; 
+    			
     			text-decoration: underline;
-    			border: 2px solid red;
+    			border: 2px solid;
 				border-radius: 5px 5px 5px 5px;
-				padding: 10px
+				
 			}
-
 
 			.heading{
 				font-size: 20px;
 				letter-spacing: 0px;
 				padding: 0px 0px 0px 50px;
 			}
-			
 
-			legend{
-				color: CornflowerBlue;
-			}
-
-			footer{
-				color: white;
-				line-height: 100px;
-				text-align: center;
-			}
-
-			.required{
-      			color:red;
-			}
-			.mark{
-      			color:red;
-			}
-
-			.msg-label{
-				float: right;
+			.message_label{
 				width: 50%;
 				margin: 0px 20px 0px 20px;
-				color: red;
+				color: #ff0000;
+			}
+
+			legend{
+				color: #6495ed;
+			}
+
+			.requi#ff0000{
+      			color:#ff0000;
 			}
 
 			input[type=text],input[type=number],input[type=password],input[type=date], select {
-				float: right;
 			    width: 50%;
 			    height: 30px;
 			    padding: 4px 10px;
@@ -139,8 +109,23 @@
 			    border-radius: 4px;
 			    box-sizing: border-box;
 			}
+
+			input[type=submit] {
+				width: 25%;
+				padding: 10px 10px;
+			    margin: 10px 20px;
+			    background-color: #4CAF50;
+			    color: #ffffff;
+			    border: none;
+			    border-radius: 4px;
+			    cursor: pointer;
+			}
+
+			input[type=submit]:hover {
+			    background-color: #45a049;
+			}
+
 			textarea{
-				float: right;
 				width: 50%;
 				padding: 4px 10px;
 			    margin: 0px 20px;
@@ -150,55 +135,34 @@
 			    box-sizing: border-box;
 			}
 
+			.radio_buttons_interest_checkbox{
+				width: 50%;
+				height: 22px;
+			    padding: 4px 5px;
+			    margin: 0px 20px 0px 40px;
+			}
 
+		
 			
-
-			input[type=submit] {
-				float: right;
-				width: 25%;
-				padding: 10px 10px;
-			    margin: 10px 20px;
-			    background-color: #4CAF50;
-			    color: white;
-			    border: none;
-			    border-radius: 4px;
-			    cursor: pointer;
-			}
-
-			input[type=submit]:hover {
-				float: right;
-				width: 25%;
-				padding: 10px 10px;
-			    margin: 10px 20px;
-			    background-color: #45a049;
-			    color: white;
-			    border: none;
-			    border-radius: 4px;
-			    cursor: pointer;
-
-			}
-
 			#captcha{ 
-				float: left;
 				width: 30%;
 				height: 70px;
-  				color: black;
+  				color: #000000;
   				padding: 8px 10px;
 			    margin: 4px 20px 4px 90px;
-  				border-color: black;
+  				border-color: #000000;
   				text-align: center;
   				font-size: 40px;
   				background-image: url('http://4.bp.blogspot.com/-EEMSa_GTgIo/UpAgBQaE6-I/AAAAAAAACUE/jdcxZVXelzA/s1600/ca.png');
 			}
 			#refresh{
-				float: left;
 				font-size:40px;
 				padding: 5px 5px;
 				margin: 9px 20px 8px 10px;
+				cursor: pointer;
 
 			}
 			#inputCaptcha{
-				float: right;
 			    width: 30%;
 			    padding: 8px 10px;
 			    margin: 15px 90px 8px 20px;
@@ -207,10 +171,59 @@
 			    border-radius: 4px;
 			    box-sizing: border-box;
 			}
-			.msg-label-captcha{
-				float: right;
+			
+			.message_label_captcha{
 				width: 30%;
-			    margin: 0px 90px 0px 20px;
-				color: red;
+			    margin: 0px 90px 0px 0px;
+				color: #ff0000;
+			}
+
+			
+			.footer{
+				width: 1000px;
+				height: 100px;
+				clear: both;
+				background: #000000;
+			}
+
+			footer{
+				color: #ffffff;
+				line-height: 100px;
+				text-align: center;
+			}
+
+
+			.float_left{
+				float: left;
+
+			}
+			.float_right{
+				float: right;
+				
+			}
+			.float_clear{
+				clear:both;
+			}
+
+			
+			
+
+			
+			
+
+			@media only screen and (max-width:999px){
+				.container{
+					width: 100%;
+				}
+				
+				.header{
+					width: 100%;
+				}
+				.content{
+					width: 100%;
+				}
+				.footer{
+					width: 100%;
+				}
 			}
 			

@@ -9,11 +9,11 @@ var cityOptions;
 
 			countryOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
 		});
-		$('#country1').html(countryOptions);
-		$('#country2').html(countryOptions);
+		$('#current_address_country').html(countryOptions);
+		$('#permanent_address_country').html(countryOptions);
 	});
 
-	$("#country1").change(function(){
+	$("#current_address_country").change(function(){
 		stateOptions = null;
 		var x = $(this).val();
 		$.getJSON('json/states.json',function(result){
@@ -23,11 +23,11 @@ var cityOptions;
 					stateOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
 				}
 			});
-			$('#state1').html(stateOptions);
+			$('#current_address_state').html(stateOptions);
 		});
 	});
 
-	$("#country2").change(function(){
+	$("#permanent_address_country").change(function(){
 		stateOptions = null;
 		var x = $(this).val();
 		$.getJSON('json/states.json',function(result){
@@ -37,11 +37,11 @@ var cityOptions;
 					stateOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
 				}
 			});
-			$('#state2').html(stateOptions);
+			$('#permanent_address_state').html(stateOptions);
 		});
 	});
 	
-	$("#state1").change(function(){
+	$("#current_address_state").change(function(){
 		var x = $(this).val();
 		cityOptions = null;
 		$.getJSON('json/cities.json',function(result){
@@ -51,11 +51,11 @@ var cityOptions;
 					cityOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
 				}
 			});
-			$('#city1').html(cityOptions);
+			$('#current_address_city').html(cityOptions);
 		});
 	});
 
-	$("#state2").change(function(){
+	$("#permanent_address_state").change(function(){
 		var x = $(this).val();
 		cityOptions = null;
 		$.getJSON('json/cities.json',function(result){
@@ -65,7 +65,7 @@ var cityOptions;
 					cityOptions+="<option value='"+value.id+"'>"+value.name+"</option>";
 				}
 			});
-			$('#city2').html(cityOptions);
+			$('#permanent_address_city').html(cityOptions);
 		});
 	});
 });
