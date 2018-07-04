@@ -1,13 +1,46 @@
 
 
+
+var errors = {
+			error_firstname:"Fill the first name field",
+			error_firstname_length:"First name length between 3 to 20 character",
+			error_middlename_length:"Middle name length not exceed  20 character",
+			error_lastname:"Fill the last name field",
+			error_lastname_length:"Last name length between 3 to 20 character",
+			error_gender:"Select gender field",
+			error_date_of_birth:"Enter date of birth",
+			error_interest:"Select interest field",
+			error_email:"Fill the email id field",
+			error_email_validation:"Enter correct email id ex:abc@gmail.com",
+			error_password:"Fill the password  field",
+			error_password_length:"password must between 8 to 16 character",
+			error_password_validation:"password must contain a lowercase letter, a uppercase letter, a numeric number and a special character",
+			error_confirm_password:"Fill the confirm password  field",
+			error_password_mismatch:"password mismatch",
+			error_alternative_email:"Enter correct alternate email id ex:abc@gmail.com",
+			error_mobileno:"Fill the mobile number  field",
+			error_mobileno_validation:"Enter correct mobile number",
+			error_alternative_mobileno_validation:"Enter correct alternate mobile number",
+			error_current_address:"Fill the current address field",
+			error_country:"Select the country field",
+			error_state:"Select the state field",
+			error_city:"Select the city field",
+			error_zip_code:"Fill the zip code field",
+			error_zip_code_validation:"Correct the zip code field",
+			error_zip_code_length:"Enter 6 digit zip code",
+			error_captcha:"Enter captcha field",
+			error_captcha_validation:"Invalid captcha"
+		};
+
+
 function validateForm(){
 
 	var span = document.getElementsByClassName("message_label")
 	for (var i = 0; i < span.length; i++) {
 		span[i].innerHTML = "";
 	}
-	var inputCaptcha_id = document.getElementById("inputCaptcha");
-	inputCaptcha_id.innerHTML="";
+	var message_captcha_id = document.getElementById("message_captcha");
+	message_captcha_id.innerHTML="";
 
 
 
@@ -71,7 +104,7 @@ function validateForm(){
 	var permanent_address_zip = permanent_address_zip_id.value;
 	var permanent_address_zip_regx =  /^\s*$|^\d{6}$/g;
 
-	
+	var inputCaptcha_id = document.getElementById("inputCaptcha");
 	var inputCaptcha = inputCaptcha_id.value;
 
 	var captcha_value_id = document.getElementById("captcha_value");
@@ -84,150 +117,137 @@ function validateForm(){
 
 
 	if (first_name=="") {
-		printError("message_first_name","Fill the first name field","red");
+		printError("message_first_name","error_firstname");
 		first_name_id.focus();
 		return false;
 	}if (!(first_name.length<=20 && first_name.length>=3)) {
-		printError("message_first_name","First name length between 3 to 20 character","red");
+		printError("message_first_name","error_firstname_length");
 		first_name_id.focus();
 		return false;
-	}if (middle_name.length>20) {
-		printError("message_middle_name","Middle name length not exceed  20 character","red");
-		middle_name_id.focus();
-		return false;
-		
 	}if (last_name=="") {
-		printError("message_last_name","Fill the last name field","red");
+		printError("message_last_name","error_lastname");
 		last_name_id.focus();
 		return false;
 		
 	}if (!(last_name.length<=20 && last_name.length>=3)) {
-		printError("message_last_name","Last name length between 3 to 20 character","red");
+		printError("message_last_name","error_lastname_length");
 		last_name_id.focus();
 		return false;
 	}if (!gender.length) {
-        printError("message_gender","Select gender field","red");
+        printError("message_gender","error_gender");
 		document.getElementById("male").focus();
 		return false;
 	}if (date_of_birth=="") {
-        printError("message_date_of_birth","Enter date of birth","red");
+        printError("message_date_of_birth","error_date_of_birth");
 		date_of_birth_id.focus();
 		return false;
 	}if (!interest.length) {
-        printError("message_interest","Select interest field","red");
+        printError("message_interest","error_interest");
 		document.getElementById("sports").focus();
 		return false;
 	}if (email=="") {
-		printError("message_email","Fill the email id field","red");
+		printError("message_email","error_email");
 		email_id.focus();
 		return false;
 		
 	}if (email_regx.test(email) == false){
-        printError("message_email","Enter correct email id ex:abc@gmail.com","red");
+        printError("message_email","error_email_validation");
 		email_id.focus();
 		return false;        
 	}if (password=="") {
-		printError("message_password","Fill the password  field","red");
+		printError("message_password","error_password");
 		password_id.focus();
 		return false;
 		
 	}if (!(password.length>=8 && password.length<=16)){
-        printError("message_password","password must between 8 to 16 character","red");
+        printError("message_password","error_password_length");
 		password_id.focus();
 		return false;        
 	}if (password_regx.test(password) == false){
-        printError("message_password","password must contain a lowercase letter, a uppercase letter, a numeric number and a special character","red");
+        printError("message_password","error_password_validation");
 		password_id.focus();
 		return false;        
 	}
 	if (confirm_password=="") {
-		printError("message_confirm_password","Fill the confirm password  field","red");
+		printError("message_confirm_password","error_confirm_password");
 		confirm_password_id.focus();
 		return false;
 		
-	}if (!(confirm_password.length>=8 && confirm_password.length<=16)){
-        printError("message_confirm_password","password must between 8 to 16 character","red");
-		confirm_password_id.focus();
-		return false;        
-	}if (password_regx.test(confirm_password) == false){
-        printError("message_confirm_password","password must contain a lowercase letter, a uppercase letter, a numeric number and a special character","red");
-		confirm_password_id.focus();
-		return false;        
 	}if (password!=confirm_password){
-        printError("message_confirm_password","password mismatch","red");
+        printError("message_confirm_password","error_password_mismatch");
 		confirm_password_id.focus();
 		return false;        
 	}if (alternative_email_regx.test(alternative_email) == false){
-        printError("message_alternative_email","Enter correct alternate email id ex:abc@gmail.com","red");
+        printError("message_alternative_email","error_alternative_email");
 		alternative_email_id.focus();
 		return false;        
 	}if (mobile_no=="") {
-		printError("message_mobile_no","Fill the mobile number  field","red");
+		printError("message_mobile_no","error_mobileno");
 		mobile_no_id.focus();
 		return false;
 		
 	}if (mobile_no_regx.test(mobile_no) == false){
-        printError("message_mobile_no","Enter correct mobile number","red");
+        printError("message_mobile_no","error_mobileno_validation");
 		mobile_no_id.focus();
 		return false;        
 	}if (alternative_mobile_no_regx.test(alternative_mobile_no) == false){
-        printError("message_alternative_mobile_no","Enter correct alternate mobile number","red");
+        printError("message_alternative_mobile_no","error_alternative_mobileno_validation");
 		alternative_mobile_no_id.focus();
 		return false;        
 	}if (current_address=="") {
-		printError("message_current_address","Fill the current address field","red");
+		printError("message_current_address","error_current_address");
 		current_address_id.focus();
 		return false;
 		
 	}if (current_address_country=="blank") {
-		printError("message_current_address_country","Select the country field","red");
+		printError("message_current_address_country","error_country");
 		current_address_country_id.focus();
 		return false;
 		
 	}if (current_address_state=="blank") {
-		printError("message_current_address_state","Select the state field","red");
+		printError("message_current_address_state","error_state");
 		current_address_state_id.focus();
 		return false;
 		
 	}if (current_address_city=="blank") {
-		printError("message_current_address_city","Select the city field","red");
+		printError("message_current_address_city","error_city");
 		current_address_city_id.focus();
 		return false;
 		
 	}if (current_address_zip=="") {
-		printError("message_current_address_zip","Fill the zip code field","red");
+		printError("message_current_address_zip","error_zip_code");
 		current_address_zip_id.focus();
 		return false;
 		
 	}if (parseInt(current_address_zip)==0) {
-		printError("message_current_address_zip","Correct the zip code field","red");
+		printError("message_current_address_zip","error_zip_code_validation");
 		current_address_zip_id.focus();
 		return false;
 		
 	}
 	if (current_address_zip_regx.test(current_address_zip) == false) {
-		printError("message_current_address_zip","Enter 6 digit zip code","red");
+		printError("message_current_address_zip","error_zip_code_length");
 		current_address_zip_id.focus();
 		return false;
 		
 	}
 	if (parseInt(permanent_address_zip)==0) {
-		printError("message_permanent_address_zip","Correct the zip code field","red");
+		printError("message_permanent_address_zip","error_zip_code_validation");
 		permanent_address_zip_id.focus();
 		return false;
 		
 	}if (permanent_address_zip_regx.test(permanent_address_zip) == false) {
-		printError("message_permanent_address_zip","Enter 6 digit zip code","red");
+		printError("message_permanent_address_zip","error_zip_code_length");
 		permanent_address_zip_id.focus();
 		return false;
 		
 	}if (inputCaptcha=="") {
-		printError("message_captcha","Enter captcha field","red");
+		printError("message_captcha","error_captcha");
 		inputCaptcha_id.focus();
 		return false;
 		
 	}if (parseInt(inputCaptcha)!=parseInt(captcha_value)) {
-		printError("message_captcha","Invalid captcha","red");
+		printError("message_captcha","error_captcha_validation");
 		captcha_value_id.focus();
 		return false;
 		
@@ -310,10 +330,9 @@ function numbersOnly(input){
 }
 
 
-function printError(id,msg,color){
+function printError(id,msgid){
 	var ele = document.getElementById(id);
-	ele.innerHTML=msg;
-	ele.style.color=color;
+	ele.innerHTML=errors[msgid];
 }
 
 

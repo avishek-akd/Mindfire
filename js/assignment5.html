@@ -61,15 +61,15 @@
 
 							    <label for="first_name" class="heading">First Name</label>
 							    <span class="required">*</span>
-							    <input type="text" id="first_name" class="float_right" name="first_name" placeholder="Enter Your First Name.." onkeyup="lettersOnly(this)"><br>
+							    <input type="text" id="first_name" class="float_right" name="first_name" maxlength="20"placeholder="Enter Your First Name.." onkeyup="lettersOnly(this)"><br>
 							    <span id="message_first_name" class="message_label float_right"></span><br><br>
 
 							    <label for="middle_name" class="heading">Middle Name</label>
-							    <input type="text" id="middle_name" class="float_right" name="middle_name" placeholder="Enter Your Middle Name.." onkeyup="lettersOnly(this)"><br>
+							    <input type="text" id="middle_name" class="float_right" name="middle_name" maxlength="20" placeholder="Enter Your Middle Name.." onkeyup="lettersOnly(this)"><br>
 							    <span id="message_middle_name" class="message_label float_right"></span><br><br>
 
 							    <label for="last_name" class="heading">Last Name</label><span class="required">*</span>
-							    <input type="text" id="last_name" class="float_right" name="last_name" placeholder="Enter Your Last Name.." onkeyup="lettersOnly(this)"><br>
+							    <input type="text" id="last_name" class="float_right" name="last_name" maxlength="20" placeholder="Enter Your Last Name.." onkeyup="lettersOnly(this)"><br>
 							    <span id="message_last_name" class="message_label float_right"></span><br><br>
 
 							    <label for="male"class="heading">Gender</label>
@@ -110,17 +110,17 @@
 
 	 							<label for="email" class="heading">Email Id</label>
 	 							<span class="required">*</span>
-							    <input type="text" id="email" class="float_right" name="email" placeholder="Enter Your Email.." ><br>
+							    <input type="text" id="email" maxlength="40" class="float_right" name="email" placeholder="Enter Your Email.." ><br>
 							    <span id="message_email" class="message_label float_right"></span><br><br>
 
 							    <label for="password" class="heading">Password</label>
 							    <span class="required">*</span>
-						    	<input type="password" id="password" class="float_right" name="password" placeholder="Enter Your Password.." ><br>
+						    	<input type="password" id="password" maxlength="16" class="float_right" name="password" placeholder="Enter Your Password.." ><br>
 						    	<span id="message_password" class="message_label float_right"></span><br><br><br>
 
 						    	<label for="confirm_password" class="heading">Confirm Password</label>
 						    	<span class="required">*</span>
-						    	<input type="password" id="confirm_password" class="float_right" name="confirm_password" placeholder="Re-enter Your Password.." ><br>
+						    	<input type="password" id="confirm_password" maxlength="16" class="float_right" name="confirm_password" placeholder="Re-enter Your Password.." ><br>
 						    	<span id="message_confirm_password" class="message_label float_right"></span><br><br>
 	 							
 	 						</fieldset>
@@ -129,16 +129,16 @@
 	 							<legend>Contact Information</legend>
 
 	 							<label for="alternative_email" class="heading">Alternative Email Id</label>
-							    <input type="text" id="alternative_email" class="float_right" name="alternative_email" placeholder="Enter Your Alternative Email.."><br>
+							    <input type="text" id="alternative_email" maxlength="40" class="float_right" name="alternative_email" placeholder="Enter Your Alternative Email.."><br>
 							    <span id="message_alternative_email" class="message_label float_right"></span><br><br>
 
 							    <label for="mobile_no" class="heading">Mobile No</label>
 							    <span class="required">*</span>
-							    <input type="text" id="mobile_no" class="float_right" name="mobile_no" placeholder="Enter Your mobile_no No.." onkeyup="numbersOnly(this)"><br>
+							    <input type="text" id="mobile_no" maxlength="10" class="float_right" name="mobile_no" placeholder="Enter Your mobile_no No.." onkeyup="numbersOnly(this)"><br>
 							    <span id="message_mobile_no" class="message_label float_right"></span><br><br>
 
 							    <label for="alternative_mobile_no" class="heading">Alternative Mobile No</label>
-							    <input type="text" id="alternative_mobile_no" class="float_right" name="alternative_mobile_no" placeholder="Enter Your Alternative mobile_no No.." onkeyup="numbersOnly(this)"><br>
+							    <input type="text" id="alternative_mobile_no" class="float_right" name="alternative_mobile_no" maxlength="10" placeholder="Enter Your Alternative mobile_no No.." onkeyup="numbersOnly(this)"><br>
 							    <span id="message_alternative_mobile_no" class="message_label float_right"></span><br><br>
 
 							    <fieldset>
@@ -169,7 +169,7 @@
 									<span id="message_current_address_city" class="message_label float_right"></span><br><br>
 
 									<label for="current_address_zip" class="heading">Zip Code</label><span class="required">*</span>
-							    	<input type="text" id="current_address_zip" class="float_right" name="current_address_zip" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
+							    	<input type="text" id="current_address_zip" class="float_right" name="current_address_zip" maxlength="6" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
 							    	<span id="message_current_address_zip" class="message_label float_right"></span><br><br>
 
 	 							</fieldset>
@@ -198,7 +198,7 @@
 									<span id="message_permanent_address_city" class="message_label float_right"></span><br><br>
 
 									<label for="permanent_address_zip" class="heading">Zip Code</label>
-							    	<input type="text" id="permanent_address_zip" class="float_right" name="permanent_address_zip" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
+							    	<input type="text" id="permanent_address_zip" class="float_right" name="permanent_address_zip" maxlength="6" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
 							    	<span id="message_permanent_address_zip" class="message_label float_right"></span><br><br>
 
 	 							</fieldset>
@@ -211,7 +211,7 @@
 	 							<input type="hidden" id="captcha_value">
 	 							<i class="fa fa-refresh fa-spin float_left" id="refresh"  onclick="changeCaptcha()"></i>
 	 							
-	 							<input type="text" id="inputCaptcha" class="float_right" placeholder="Enter result on captcha" onkeyup="numbersOnly(this)" />
+	 							<input type="text" id="inputCaptcha" maxlength="5" class="float_right" placeholder="Enter result on captcha" onkeyup="numbersOnly(this)" />
 	 							<span id="message_captcha" class="message_label_captcha  float_right"></span>
 
 	 						</fieldset>

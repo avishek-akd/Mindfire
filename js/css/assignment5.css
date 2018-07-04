@@ -96,7 +96,7 @@
 			}
 
 			.required{
-      				color:#ff0000;
+      			color:#ff0000;
 			}
 
 			input[type=text],input[type=number],input[type=password],input[type=date], select {
