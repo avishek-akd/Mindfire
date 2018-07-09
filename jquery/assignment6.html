@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Welcome To Website Designing</title>
+		<meta charset="UTF-8">
+  		<meta name="description" content="Website Designing">
+  		<meta name="keywords" content="website,design,bhubaneswar,website designing">
+  		<meta name="author" content="Avishek Das">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  		<link rel="stylesheet" type="text/css" href="css/assignment6.css">
+
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+  		<script type="text/javascript" src="js/address.js"></script>
+  		<script type="text/javascript" src="js/assignment6.js"></script>
+  		<script src='https://www.google.com/recaptcha/api.js'></script>
+		
+
+	</head>
+
+	<body onload="changeCaptcha()">
+		<div class="container">
+			
+			<div class="header">
+
+				<img src="images/logo.png" id="logo" class="float_left" alt="Website Designing"/>
+				
+				<img src="images/banner.jpg" id="banner" class="float_right" alt="banner"/>
+				
+			</div>
+
+			<div class="nav_bar">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Electronics</a></li>
+					<li><a href="#">TVs & Appliances</a></li>
+					<li><a href="#">Furniture</a></li>
+					<li><a href="#">Sports</a></li>
+					<li><a href="#">Login &Signup</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+
+			
+
+			<div class="content">
+				<div class="inner_content">
+					<form  method="POST" action="#" name="regd_form" id="regd_form">
+						<fieldset>
+
+							<legend>Registration Form</legend>
+							<span class="required">*</span>
+							<span class="required">marked fields are mandatory</span>
+							<fieldset>
+
+								<legend>Personal Details</legend>
+
+							    <label for="first_name" class="heading">First Name</label>
+							    <span class="required">*</span>
+							    <input type="text" id="first_name" class="float_right" name="first_name" maxlength="20"placeholder="Enter Your First Name.." onkeyup="lettersOnly(this)"><br>
+							    <span id="message_first_name" class="message_label float_right"></span><br><br>
+
+							    <label for="middle_name" class="heading">Middle Name</label>
+							    <input type="text" id="middle_name" class="float_right" name="middle_name" maxlength="20" placeholder="Enter Your Middle Name.." onkeyup="lettersOnly(this)"><br>
+							    <span id="message_middle_name" class="message_label float_right"></span><br><br>
+
+							    <label for="last_name" class="heading">Last Name</label><span class="required">*</span>
+							    <input type="text" id="last_name" class="float_right" name="last_name" maxlength="20" placeholder="Enter Your Last Name.." onkeyup="lettersOnly(this)"><br>
+							    <span id="message_last_name" class="message_label float_right"></span><br><br>
+
+							    <label for="male"class="heading">Gender</label>
+							    <span class="required">*</span>
+							   	<div class="radio_buttons_interest_checkbox float_right">
+							    	<input type="radio" id="male"  name="gender" class="gender" value="male">
+							    	<label for="male" >Male</label> 
+		 							<input type="radio" id="female" name="gender"  class="gender" value="female">
+		 							<label for="female" >Female</label><br><br>
+	 							</div><br>
+	 							<span id="message_gender" class="message_label float_right"></span><br><br>
+
+						    	<label for="date_of_birth" class="heading">Date Of Birth</label>
+						    	<span class="required">*</span>
+						    	<input type="date" id="date_of_birth" class="float_right" name="date_of_birth" min="1900-01-01"> <br>
+						    	<span id="message_date_of_birth" class="message_label float_right"></span><br><br>
+
+						    	<div class="float_clear"></div>
+
+						    	<label class="heading" for="sports">Personal Interest</label>
+						    	<span class="required">*</span>
+						    	<div class="radio_buttons_interest_checkbox float_right">
+							    	<input type="checkbox" id="sports" name="interest" value="Sports" class="interest" >
+							    	<label for="sports" >Sports</label>
+	
+									<input type="checkbox" id="computer" name="interest" value="Computer" class="interest"> <label for="computer" >Computer</label> 
+									<input type="checkbox" id="software" name="interest" value="Software" class="interest"> <label for="software" >Software</label> 
+									<input type="checkbox" id="fashion" name="interest" value="Sports" class="interest"> <label for="fashion" >Fashion</label> 
+									<input type="checkbox" id="cricket" name="interest" value="Cricket" class="interest"> <label for="cricket" >Cricket</label> 
+									
+								</div>
+								<span id="message_interest" class="message_label float_right"></span><br>
+
+	 						</fieldset>
+
+	 						<fieldset>
+	 							<legend>Login Details</legend>
+
+	 							<label for="email" class="heading">Email Id</label>
+	 							<span class="required">*</span>
+							    <input type="text" id="email" maxlength="40" class="float_right" name="email" placeholder="Enter Your Email.." ><br>
+							    <span id="message_email" class="message_label float_right"></span><br><br>
+
+							    <label for="password" class="heading">Password</label>
+							    <span class="required">*</span>
+						    	<input type="password" id="password" maxlength="16" class="float_right" name="password" placeholder="Enter Your Password.." ><br>
+						    	<span id="message_password" class="message_label float_right"></span><br><br><br>
+
+						    	<label for="confirm_password" class="heading">Confirm Password</label>
+						    	<span class="required">*</span>
+						    	<input type="password" id="confirm_password" maxlength="16" class="float_right" name="confirm_password" placeholder="Re-enter Your Password.." ><br>
+						    	<span id="message_confirm_password" class="message_label float_right"></span><br><br>
+	 							
+	 						</fieldset>
+
+	 						<fieldset>
+	 							<legend>Contact Information</legend>
+
+	 							<label for="alternative_email" class="heading">Alternative Email Id</label>
+							    <input type="text" id="alternative_email" maxlength="40" class="float_right" name="alternative_email" placeholder="Enter Your Alternative Email.."><br>
+							    <span id="message_alternative_email" class="message_label float_right"></span><br><br>
+
+							    <label for="mobile_no" class="heading">Mobile No</label>
+							    <span class="required">*</span>
+							    <input type="text" id="mobile_no" maxlength="10" class="float_right" name="mobile_no" placeholder="Enter Your mobile_no No.." onkeyup="numbersOnly(this)"><br>
+							    <span id="message_mobile_no" class="message_label float_right"></span><br><br>
+
+							    <label for="alternative_mobile_no" class="heading">Alternative Mobile No</label>
+							    <input type="text" id="alternative_mobile_no" class="float_right" name="alternative_mobile_no" maxlength="10" placeholder="Enter Your Alternative mobile_no No.." onkeyup="numbersOnly(this)"><br>
+							    <span id="message_alternative_mobile_no" class="message_label float_right"></span><br><br>
+
+							    <fieldset>
+		 							<legend>Current Address</legend>
+
+		 							<label for="current_address" class="heading">Address Line</label>
+		 							<span class="required">*</span>
+								    <textarea rows="4" cols="50" name="current_address" id="current_address" class="float_right"></textarea> <br><br><br><br>
+								    <span id="message_current_address" class="message_label float_right"></span><br><br>
+
+								    <label for="current_address_country" class="heading">Country</label>
+								    <span class="required">*</span>
+							   		<select id="current_address_country" class="float_right" name="current_address_country"></select><br>
+							    	<span id="message_current_address_country" class="message_label float_right"></span><br><br>
+
+							    	<label for="current_address_state" class="heading">State</label>
+							    	<span class="required">*</span>
+	 								<select id="current_address_state" class="float_right" name="current_address_state" >
+										<option value="blank">------------Select State------------</option>
+									</select><br>
+									<span id="message_current_address_state" class="message_label float_right"></span><br><br>
+
+									<label for="current_address_city" class="heading">City</label>
+									<span class="required">*</span>
+	 								<select id="current_address_city" class="float_right" name="current_address_city" >
+										<option value="blank">------------Select City------------</option>
+									</select><br>
+									<span id="message_current_address_city" class="message_label float_right"></span><br><br>
+
+									<label for="current_address_zip" class="heading">Zip Code</label><span class="required">*</span>
+							    	<input type="text" id="current_address_zip" class="float_right" name="current_address_zip" maxlength="6" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
+							    	<span id="message_current_address_zip" class="message_label float_right"></span><br><br>
+
+	 							</fieldset>
+
+	 							<fieldset>
+		 							<legend>Permanent Address</legend>
+
+		 							<label class="heading" for="permanent_address">Address Line</label>
+								    <textarea rows="4" cols="50" name="permanent_address" id="permanent_address" class="float_right"></textarea> <br><br><br><br>
+								    <span id="message_permanent_address" class="message_label float_right"></span><br><br>
+
+								    <label for="permanent_address_country" class="heading">Country</label>
+							   		<select id="permanent_address_country" class="float_right" name="permanent_address_country"></select><br>
+							    	<span id="message_permanent_address_country" class="message_label float_right"></span><br><br>
+
+							    	<label for="permanent_address_state" class="heading">State</label>
+	 								<select id="permanent_address_state" class="float_right" name="permanent_address_state">
+										<option value="blank">------------Select State------------</option>
+									</select><br>
+									<span id="message_permanent_address_state" class="message_label float_right"></span><br><br>
+
+									<label for="permanent_address_city" class="heading">City</label>
+	 								<select id="permanent_address_city" class="float_right" name="permanent_address_city">
+										<option value="blank">------------Select City------------</option>
+									</select><br>
+									<span id="message_permanent_address_city" class="message_label float_right"></span><br><br>
+
+									<label for="permanent_address_zip" class="heading">Zip Code</label>
+							    	<input type="text" id="permanent_address_zip" class="float_right" name="permanent_address_zip" maxlength="6" placeholder="Enter Your Zip Code.." onkeyup="numbersOnly(this)">
+							    	<span id="message_permanent_address_zip" class="message_label float_right"></span><br><br>
+
+	 							</fieldset>
+	 						</fieldset>
+
+	 						<fieldset>
+	 							<legend>Captcha</legend>
+
+	 							<input type="text" id="captcha" class="float_left" disabled>
+	 							<input type="hidden" id="captcha_value">
+	 							<i class="fa fa-refresh fa-spin float_left" id="refresh"  onclick="changeCaptcha()"></i>
+	 							
+	 							<input type="text" id="inputCaptcha" maxlength="5" class="float_right" placeholder="Enter result on captcha" onkeyup="numbersOnly(this)" />
+	 							<span id="message_captcha" class="message_label_captcha  float_right"></span>
+
+	 						</fieldset>
+
+							
+	 						<input type="submit" value="Register" class="float_right" name="register">
+					    </fieldset>
+	 				</form>
+ 				 </div>
+			</div>
+
+			
+			<div class="footer">
+				<footer>&copy; Copyright 2018 Mindfire Solutions</footer>
+			</div>
+		</div>
+
+	</body>
+</html>
