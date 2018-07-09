@@ -1,5 +1,5 @@
 
-
+var check_first_blank_field = true;
 
 var errors = {
 			error_firstname:"Fill the first name field",
@@ -34,6 +34,8 @@ var errors = {
 
 
 function validateForm(){
+
+	this.check_first_blank_field = true;
 
 	var span = document.getElementsByClassName("message_label")
 	for (var i = 0; i < span.length; i++) {
@@ -111,149 +113,125 @@ function validateForm(){
 	var captcha_value = captcha_value_id.value;
 
 
-
+	var flag = true;
+	
 
 	
 
 
 	if (first_name=="") {
-		printError("message_first_name","error_firstname");
-		first_name_id.focus();
-		return false;
-	}if (!(first_name.length<=20 && first_name.length>=3)) {
-		printError("message_first_name","error_firstname_length");
-		first_name_id.focus();
-		return false;
+		printError("message_first_name","error_firstname",first_name_id,this.check_first_blank_field);
+		flag =  false;
+	}else if (!(first_name.length<=20 && first_name.length>=3)) {
+		printError("message_first_name","error_firstname_length",first_name_id,this.check_first_blank_field);
+		flag =  false;
 	}if (last_name=="") {
-		printError("message_last_name","error_lastname");
-		last_name_id.focus();
-		return false;
+		console.log(this.check_first_blank_field);
+		printError("message_last_name","error_lastname",last_name_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (!(last_name.length<=20 && last_name.length>=3)) {
-		printError("message_last_name","error_lastname_length");
-		last_name_id.focus();
-		return false;
+	}else if (!(last_name.length<=20 && last_name.length>=3)) {
+		printError("message_last_name","error_lastname_length",last_name_id,this.check_first_blank_field);
+		flag =  false;
 	}if (!gender.length) {
-        printError("message_gender","error_gender");
-		document.getElementById("male").focus();
-		return false;
+        printError("message_gender","error_gender",document.getElementById("male"),this.check_first_blank_field);
+		flag =  false;
 	}if (date_of_birth=="") {
-        printError("message_date_of_birth","error_date_of_birth");
-		date_of_birth_id.focus();
-		return false;
+        printError("message_date_of_birth","error_date_of_birth",date_of_birth_id,this.check_first_blank_field);
+		flag =  false;
 	}if (!interest.length) {
-        printError("message_interest","error_interest");
-		document.getElementById("sports").focus();
-		return false;
+        printError("message_interest","error_interest",document.getElementById("sports"),this.check_first_blank_field);
+		flag =  false;
 	}if (email=="") {
-		printError("message_email","error_email");
-		email_id.focus();
-		return false;
+		printError("message_email","error_email",email_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (email_regx.test(email) == false){
-        printError("message_email","error_email_validation");
-		email_id.focus();
-		return false;        
+	}else if (email_regx.test(email) == false){
+        printError("message_email","error_email_validation",email_id,this.check_first_blank_field);
+		flag =  false;    
 	}if (password=="") {
-		printError("message_password","error_password");
-		password_id.focus();
-		return false;
+		printError("message_password","error_password",password_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (!(password.length>=8 && password.length<=16)){
-        printError("message_password","error_password_length");
-		password_id.focus();
-		return false;        
-	}if (password_regx.test(password) == false){
-        printError("message_password","error_password_validation");
-		password_id.focus();
-		return false;        
+	}else if (!(password.length>=8 && password.length<=16)){
+        printError("message_password","error_password_length",password_id,this.check_first_blank_field);
+		flag =  false;    
+	}else if (password_regx.test(password) == false){
+        printError("message_password","error_password_validation",password_id,this.check_first_blank_field);
+		flag =  false;      
 	}
 	if (confirm_password=="") {
-		printError("message_confirm_password","error_confirm_password");
-		confirm_password_id.focus();
-		return false;
+		printError("message_confirm_password","error_confirm_password",confirm_password_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (password!=confirm_password){
-        printError("message_confirm_password","error_password_mismatch");
-		confirm_password_id.focus();
-		return false;        
+	}else if (password!=confirm_password){
+        printError("message_confirm_password","error_password_mismatch",confirm_password_id,this.check_first_blank_field);
+		flag =  false;     
 	}if (alternative_email_regx.test(alternative_email) == false){
-        printError("message_alternative_email","error_alternative_email");
-		alternative_email_id.focus();
-		return false;        
+        printError("message_alternative_email","error_alternative_email",alternative_email_id,this.check_first_blank_field);
+		flag =  false;     
 	}if (mobile_no=="") {
-		printError("message_mobile_no","error_mobileno");
-		mobile_no_id.focus();
-		return false;
+		printError("message_mobile_no","error_mobileno",mobile_no_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (mobile_no_regx.test(mobile_no) == false){
-        printError("message_mobile_no","error_mobileno_validation");
-		mobile_no_id.focus();
-		return false;        
+	}else if (mobile_no_regx.test(mobile_no) == false){
+        printError("message_mobile_no","error_mobileno_validation",mobile_no_id,this.check_first_blank_field);
+		flag =  false;      
 	}if (alternative_mobile_no_regx.test(alternative_mobile_no) == false){
-        printError("message_alternative_mobile_no","error_alternative_mobileno_validation");
-		alternative_mobile_no_id.focus();
-		return false;        
+        printError("message_alternative_mobile_no","error_alternative_mobileno_validation",alternative_mobile_no_id,this.check_first_blank_field);
+		flag =  false;       
 	}if (current_address=="") {
-		printError("message_current_address","error_current_address");
-		current_address_id.focus();
-		return false;
+		printError("message_current_address","error_current_address",current_address_id,this.check_first_blank_field);
+		flag =  false;
 		
 	}if (current_address_country=="blank") {
-		printError("message_current_address_country","error_country");
-		current_address_country_id.focus();
-		return false;
+		printError("message_current_address_country","error_country",current_address_country_id,this.check_first_blank_field);
+		flag =  false;
 		
 	}if (current_address_state=="blank") {
-		printError("message_current_address_state","error_state");
-		current_address_state_id.focus();
-		return false;
-		
+		printError("message_current_address_state","error_state",current_address_state_id,this.check_first_blank_field);
+		flag =  false;
 	}if (current_address_city=="blank") {
-		printError("message_current_address_city","error_city");
-		current_address_city_id.focus();
-		return false;
+		printError("message_current_address_city","error_city",current_address_city_id,this.check_first_blank_field);
+		flag =  false;
 		
 	}if (current_address_zip=="") {
-		printError("message_current_address_zip","error_zip_code");
-		current_address_zip_id.focus();
-		return false;
+		printError("message_current_address_zip","error_zip_code",current_address_zip_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (parseInt(current_address_zip)==0) {
-		printError("message_current_address_zip","error_zip_code_validation");
-		current_address_zip_id.focus();
-		return false;
+	}else if (parseInt(current_address_zip)==0) {
+		printError("message_current_address_zip","error_zip_code_validation",current_address_zip_id,this.check_first_blank_field);
+		flag =  false;
 		
 	}
-	if (current_address_zip_regx.test(current_address_zip) == false) {
-		printError("message_current_address_zip","error_zip_code_length");
-		current_address_zip_id.focus();
-		return false;
+	else if (current_address_zip_regx.test(current_address_zip) == false) {
+		printError("message_current_address_zip","error_zip_code_length",current_address_zip_id,this.check_first_blank_field);
+		flag =  false;
 		
 	}
 	if (parseInt(permanent_address_zip)==0) {
-		printError("message_permanent_address_zip","error_zip_code_validation");
-		permanent_address_zip_id.focus();
-		return false;
+		printError("message_permanent_address_zip","error_zip_code_validation",permanent_address_zip_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (permanent_address_zip_regx.test(permanent_address_zip) == false) {
-		printError("message_permanent_address_zip","error_zip_code_length");
-		permanent_address_zip_id.focus();
-		return false;
+	}else if (permanent_address_zip_regx.test(permanent_address_zip) == false) {
+		printError("message_permanent_address_zip","error_zip_code_length",permanent_address_zip_id,this.check_first_blank_field);
+		flag =  false;
 		
 	}if (inputCaptcha=="") {
-		printError("message_captcha","error_captcha");
-		inputCaptcha_id.focus();
-		return false;
+		printError("message_captcha","error_captcha",inputCaptcha_id,this.check_first_blank_field);
+		flag =  false;
 		
-	}if (parseInt(inputCaptcha)!=parseInt(captcha_value)) {
-		printError("message_captcha","error_captcha_validation");
-		captcha_value_id.focus();
-		return false;
+	}else if (parseInt(inputCaptcha)!=parseInt(captcha_value)) {
+		printError("message_captcha","error_captcha_validation",captcha_value_id,this.check_first_blank_field);
+		flag =  false;
 		
 	}
 
-           
+	if (flag==true) {
+		alert("Registration Completed");
+	}
+
+      return flag;     
 }
 
 function changeCaptcha(){
@@ -330,9 +308,14 @@ function numbersOnly(input){
 }
 
 
-function printError(id,msgid){
+function printError(id,msgid,fieldid,check_first_blank_field){
 	var ele = document.getElementById(id);
 	ele.innerHTML=errors[msgid];
+	if (check_first_blank_field) {
+		fieldid.focus();
+		this.check_first_blank_field = false;
+	}
+
 }
 
 
