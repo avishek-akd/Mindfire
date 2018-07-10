@@ -14,7 +14,29 @@
 
 			.header{
 				width: 1000px;
-				height: 130px;
+				height: 180px;
+
+			}
+			.slider{
+				width: 1000px;
+				height: 180px;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			.slides{
+				display: block;;
+				width: 6000px;
+				height: 180px;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+			}
+
+			.slide{
+				width: 1000px;
+				height: 180px;
+
 			}
 
 			#logo{
@@ -24,12 +46,7 @@
 				
 			}
 
-			#banner{
-				height: 130px;
-				width: 1000px;
-				
-			}
-
+			
 
 			.nav_bar{
 				width: 1000px;
