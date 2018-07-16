@@ -82,14 +82,24 @@ var check_first_blank_field = true;
 
  	$("#regd_form").submit(function(){
  		var form = validateForm();
+ 		var check = false;
 
  		if (form) {
- 			swal("Successful", "You registered successfully!", "success");
- 			
- 			form = false;
- 		}
+ 			swal({
+  				title: "Successful",
+  				text: "You registered successfully!",
+  				icon: "success",
+  				button: "OK"
 
- 		return form;
+  				})
+
+  				.then((value) => {
+  					if (value) {
+  						check = true;
+  					}	
+				});
+		}		
+ 		return check;
  	});
 
  	
