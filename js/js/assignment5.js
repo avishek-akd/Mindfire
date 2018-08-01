@@ -286,7 +286,7 @@ function changeCaptcha(){
     	} 
 
 	today = yyyy+'-'+mm+'-'+dd;
-	document.getElementById("date_of_birth").setAttribute("max", today);
+	$("#date_of_birth").attr("max", today);
 
 }
 
