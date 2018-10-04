@@ -1,2 +1,2 @@
 # Mindfire
-Assignments
+Assignment
